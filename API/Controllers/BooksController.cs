@@ -52,6 +52,9 @@ namespace API.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateBook(int id, Book updatedBook)
         {
+            if (updatedBook == null)
+                return BadRequest();
+
             if (id != updatedBook.Id)
                 return BadRequest();
 
