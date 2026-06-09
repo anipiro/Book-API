@@ -1,6 +1,6 @@
 # Book API – ASP.NET Core / EF Core / SQL Server
 
-A RESTful API for managing books, showcasing backend development skills using **ASP.NET Core 9**, **Entity Framework Core**, and **SQL Server**.
+A RESTful API for managing books, showcasing backend development skills using **ASP.NET Core 8**, **Entity Framework Core**, and **SQL Server**.
 
 ---
 
@@ -11,8 +11,9 @@ This project demonstrates:
 - Full **CRUD operations**: Create, Read, Update, Delete books
 - **Database migrations** and **data seeding** with Entity Framework Core
 - Proper **REST API conventions** and **HTTP status codes** (200, 201, 204, 404)
-- **Async database operations** and error handling
+- **Async database operations** with proper error handling
 - **Swagger/OpenAPI** integration for interactive API documentation
+- **HTTPS enforcement** for secure communications
 
 ---
 
@@ -32,25 +33,32 @@ Example JSON for POST/PUT:
   "author": "Ani",
   "yearPublished": 2025
 }
-````
+```
 
 ---
 
 ## Tech Stack
 
-* **Backend:** ASP.NET Core 9
-* **ORM:** Entity Framework Core
+* **Backend:** ASP.NET Core 8
+* **ORM:** Entity Framework Core 8
 * **Database:** SQL Server
-* **API Testing:** Swagger / Postman / REST Client
+* **API Documentation:** Swagger / OpenAPI
+* **API Testing:** Postman / REST Client
 
 ---
+
+## Skills Demonstrated
 
 * Designed and implemented a **fully functional backend API**
 * Used **EF Core migrations** to manage database schema changes
 * Applied **real-world problem solving**: identity columns, data seeding, HTTP status handling
 * Demonstrated ability to **debug and handle exceptions** in database operations
+* Implemented **XML documentation** for comprehensive API documentation
+* Configured **HTTPS redirection** for production security
 
 ## Seeded Data
+
+The database is pre-populated with classic literature:
 
 - 1984 – George Orwell (1949)  
 - To Kill a Mockingbird – Harper Lee (1960)  
@@ -65,8 +73,8 @@ Example JSON for POST/PUT:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/book-api.git
-   cd book-api
+   git clone https://github.com/anipiro/Book-API.git
+   cd Book-API
    ```
 
 2. Configure the database connection in `appsettings.json`:
@@ -89,9 +97,8 @@ Example JSON for POST/PUT:
    dotnet run
    ```
 
-5. Test the API via Swagger:
+5. Access the API via Swagger UI:
 
    ```
-   http://localhost:5216/swagger
+   https://localhost:5001/swagger
    ```
-
