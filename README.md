@@ -57,7 +57,7 @@ dotnet tool install --global dotnet-ef
    cd Book-API/API
    ```
 
-2. Set the connection string. It lives in `API/appsettings.json` under `ConnectionStrings:DefaultConnection`. The committed value points at the author's own machine and names no database, so replace it with your server and a database name:
+2. Set the connection string. It lives in `API/appsettings.json` under `ConnectionStrings:DefaultConnection`. The committed value uses a local SQL Server Express instance and a database called `BookDB`. To use another server, change it:
 
    ```json
    "ConnectionStrings": {
